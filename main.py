@@ -9,7 +9,7 @@ while True:
     BDayMatch = 0
     BDayNoMatch = 0
     NumberOfPeople = int(input("People: "))
-    NumberOfPossibilities = int(input("Possibilities: "))
+    NumberOfPossibilities = 365
     #starts timer
     timestampone = time.perf_counter()
     #starts brute force calculation
