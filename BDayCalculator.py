@@ -32,13 +32,14 @@ while True:
         else:
             BDayNoMatch += 1
         #prints percentage completed
-        print("Completed: "+str((SampleNumber/SampleSize)*100)[:5]+"%")
+        if (SampleNumber / SampleSize) != 0:
+            print(f"\b\b\b\b\b{str((SampleNumber / SampleSize) * 100)[:4]}%", end='', flush=True)
     
     #calculates final chance of matching birthday and stops timer
     TotalBDays = BDayMatch + BDayNoMatch
     FinalAverage = BDayMatch/TotalBDays*100
     timestamptwo = time.perf_counter()
     #prints results
-    print(f"Result: {FinalAverage}% chance of a matching birthday")
+    print(f"\nResult: {FinalAverage}% chance of a matching birthday")
     print("Ran in "+str(timestamptwo-timestampone)+" seconds\n\n")
     #repeats
